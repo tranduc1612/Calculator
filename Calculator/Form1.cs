@@ -17,9 +17,38 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+       
 
+        private void btCong_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation cal = new Calculation(a, b);
+            txtKQ.Text = cal.Execute("+").ToString();
+        }
+
+        private void btTru_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation cal = new Calculation(a, b);
+            txtKQ.Text = cal.Execute("-").ToString();
+        }
+
+        private void btNhan_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation cal = new Calculation(a, b);
+            txtKQ.Text = cal.Execute("*").ToString();
+        }
+
+        private void btChia_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation cal = new Calculation(a, b);
+            txtKQ.Text = cal.Execute("/").ToString();
         }
     }
 }
